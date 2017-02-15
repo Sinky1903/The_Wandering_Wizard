@@ -25,7 +25,7 @@ public class WizardTest {
   }
 
   @Test
-  public void canFlyBroomstock(){
+  public void canFlyBroomstick(){
     assertEquals(wizard.fly(),"mounting broom, running, skipping, flying!");
   }
 
@@ -48,6 +48,18 @@ public class WizardTest {
     Dragon dragon = new Dragon("Erik");
     wizard.setRide(dragon);
     assertEquals("Standing up tall, beating wings, lift off!", wizard.fly());
+  }
+
+  @Test
+  public void canDefend(){
+    assertEquals("Up shield", wizard.defend());
+  }
+
+  @Test
+  public void canProtectByOgre(){
+    Ogre ogre = new Ogre("Shrek");
+    wizard = new Wizard("Harry", ogre);
+    assertEquals("Get back, I'll crush you, you're crushed!", wizard.protect());
   }
 
 }
