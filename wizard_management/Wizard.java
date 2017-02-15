@@ -27,4 +27,6 @@ public class Wizard {
     this.ride = ride;
   }
 
+
+
 }
